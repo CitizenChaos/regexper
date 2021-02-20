@@ -10,6 +10,8 @@
   "scripts": {
     "start-reg": "webpack-dev-server",
     "build-reg": "webpack",
+    "start-electron": "electron .",
+    "start-all": "concurrently 'cross-env NODE_ENV=development node ./rewriteENV.js' 'npm run start-electron' 'npm run start-reg'",
     "dist-electron-x86": "cross-env NODE_ENV=production node ./rewriteENV.js && npm run build-reg && electron-builder --win --ia32",
     "dist-electron-x64": "cross-env NODE_ENV=production node ./rewriteENV.js && npm run build-reg && electron-builder --win --x64"
   },
@@ -71,5 +73,8 @@
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true
     }
+  },
+  "dependencies": {
+    "concurrently": "^6.0.0"
   }
 }

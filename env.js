@@ -1,1 +1,1 @@
-module.exports.RUN_MODE = 'production'
+module.exports.RUN_MODE = 'development'
