@@ -1,0 +1,30 @@
+{{> page_top}}
+
+<div class="application">
+  <form id="regexp-form">
+    <textarea id="regexp-input" spellcheck="false" placeholder="输入JavaScript正则表达式"></textarea>
+    <button type="submit">转换</button>
+
+    <ul class="inline-list">
+      <li class="download-svg">
+        <a href="#" class="inline-icon" data-action="download-svg" download="image.svg" type="image/svg+xml">下载 SVG</a>
+      </li>
+      <li class="download-png">
+        <a href="#" class="inline-icon" data-action="download-png" download="image.png" type="image/png">下载 PNG</a>
+      </li>
+      {{!-- <li class="permalink">
+        <a href="#" class="inline-icon" data-action="permalink">{{icon "#link-intact"}}Permalink</a>
+      </li> --}}
+    </ul>
+  </form>
+</div>
+
+<div class="results">
+  <div id="error"></div>
+
+  <ul id="warnings"></ul>
+
+  <div id="regexp-render"></div>
+</div>
+
+{{> page_bottom}}

@@ -1,0 +1,13 @@
+{
+  "plugins": ["jasmine"],
+  "env": {
+    "browser": true,
+    "jasmine": true
+  },
+  "extends": "plugin:jasmine/recommended",
+  "rules": {
+    "jasmine/no-spec-dupes": [1, "branch"],
+    "jasmine/no-suite-dupes": [1, "branch"],
+    "jasmine/prefer-toHaveBeenCalledWith": [0]
+  }
+}

@@ -1,0 +1,8 @@
+node_modules
+.sass-cache
+build
+docs
+tmp
+.firebase/
+firebase-debug.log
+dist
